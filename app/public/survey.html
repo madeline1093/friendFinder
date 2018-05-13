@@ -219,14 +219,6 @@
         <br>
     </div>
     <!--pop up module with friend match-->
-<!--     <div id="modalFriend" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <h4>Your Match:</h4>
-            <h5 id="matchName"></h5>
-            <img id="matchImg" src="" width=250px>
-        </div>
-    </div> -->
-
 
     <div class="modal fade" id="modalFriend" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -251,12 +243,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
     
     <script type="text/javascript">
         $(".submit").on("click", function(event){
@@ -265,8 +251,8 @@
 
             let userAnswers = {
                 name: $("#nameInput").val(),
-                img: $("#photoInput").val(),
-                score: [$("#questionOne").val(), $("#questionTwo").val(), $("#questionThree").val(), $("#questionFour").val(), $("#questionFive").val(), $("#questionSix").val(), $("#questionSeven").val(), $("#questionEight").val(), $("#questionNine").val(), $("#questionTen").val()]
+                photo: $("#photoInput").val(),
+                scores: [$("#questionOne").val(), $("#questionTwo").val(), $("#questionThree").val(), $("#questionFour").val(), $("#questionFive").val(), $("#questionSix").val(), $("#questionSeven").val(), $("#questionEight").val(), $("#questionNine").val(), $("#questionTen").val()]
             };
             
             //console.log(userAnswers);

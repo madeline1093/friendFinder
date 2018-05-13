@@ -17,17 +17,31 @@
 
             console.log(userInput);
 
-            let userResponses = userInput.score;
-            console.log(userResponses);
+            let userResponses = userInput.scores;
+            console.log("got here " + userResponses);
 
             let matchName;
             let matchImg;
             let totalDif = 10000;
 
+            for (let i = 0; i <friendsData.length; i++){
+                console.log(JSON.stringify(friendsData[i].scores));
 
+                let difference = 0;
+                for (let j = 0; j < userInput.length; i++){
+                    difference = difference + Math.abs(friendsData[i].scores[j] - userInput[j].scores)
+                }
+                
+                if (difference <totalDif) {
+                    totalDif = difference;
+                    matchName = friendsData[i].name;
+                    matchImg = friendsData[i].photo;
+                }
+            }
 
-
+            friendsData.push(userInput);
+            res.json({status: 'OK', matchName: matchName, matchImg: matchImg})
             
-        })
+        });
 
-    })
+    });
