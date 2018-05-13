@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script
-    src="https://code.jquery.com/jquery-3.3.1.slim.js"
-    integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
-    crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -212,11 +214,48 @@
         </div> 
         <!-- Submit Button -->
         <br>
-        <button type="button" class="btn btn-primary btn-lg btn-block submit">Submit</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block submit" data-toggle="modal" data-target="#modalFriend">Submit</button>
         <hr>
         <br>
-
     </div>
+    <!--pop up module with friend match-->
+<!--     <div id="modalFriend" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <h4>Your Match:</h4>
+            <h5 id="matchName"></h5>
+            <img id="matchImg" src="" width=250px>
+        </div>
+    </div> -->
+
+
+    <div class="modal fade" id="modalFriend" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <h4>Your Match:</h4>
+                    <h5 id="matchName"></h5>
+                    <img id="matchImg" src="" width=250px>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
 
     
     <script type="text/javascript">
@@ -230,17 +269,24 @@
                 score: [$("#questionOne").val(), $("#questionTwo").val(), $("#questionThree").val(), $("#questionFour").val(), $("#questionFive").val(), $("#questionSix").val(), $("#questionSeven").val(), $("#questionEight").val(), $("#questionNine").val(), $("#questionTen").val()]
             };
             
-            console.log(userAnswers);
+            //console.log(userAnswers);
+            //add userAnswers to the friends json
+            $.post('/api/friends', userAnswers, function(data) {
+                $("#matchName").text(data.name);
+                $("#matchImg").attr("src", data.photo);
+            });
+            
+        });
 
-        })
+            //$('#modalFriend').modal('show');
+        
 
         
     </script>
     <!--Bootstrap Script -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="../routing/apiRoutes.js"></script>
-    <script src="../routing/htmlRoutes.js"></script>
+
+    
+<!--     <script src="../routing/apiRoutes.js"></script>
+    <script src="../routing/htmlRoutes.js"></script> -->
 </body>
 </html>

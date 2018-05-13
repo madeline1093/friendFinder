@@ -5,7 +5,7 @@
 
     let friendsData = require("../data/friends");
 
-    let userAnswers = [];
+
     //routing
 
     module.exports = (function(app){
@@ -13,9 +13,16 @@
             res.json(friendsData);
         })
         app.post("/api/friends", function(req, res){
+            let userInput = req.body;
 
+            console.log(userInput);
 
+            let userResponses = userInput.score;
+            console.log(userResponses);
 
+            let matchName;
+            let matchImg;
+            let totalDif = 10000;
 
 
 
