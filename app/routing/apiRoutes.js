@@ -19,7 +19,7 @@
 
             let userScores = userInput.scores;
             console.log("got here " + userScores);
-            console.log(parseFloat(userScores[2]));
+            console.log("test 1 " +parseInt(userScores));
             let matchName;
             let matchImg;
             let totalDif = 10000;
@@ -28,16 +28,16 @@
                 console.log(friendsData[i].scores);
             } */
             for (let i = 0; i <friendsData.length; i++){
-                //console.log(JSON.stringify(friendsData[i].scores));
-                //console.log(friendsData[i].scores);
-               // console.log(friendsData);
+                //console.log("test 1" + JSON.stringify(friendsData[i].scores));
+                //console.log("test 2" + friendsData[i].scores);
+                //console.log(friendsData);
                 //console.log(friendsData[i].friends[i].scores);
                 let difference = 0;
                 for (let j = 0; j < userScores.length; j++){
                     //console.log('friendsData[i]: ' + friendsData[i]);
                    // console.log('userScores: ' + userScores[j]);
-                    //console.log('friendsData[i].scores[j]: ' + parseInt(friendsData[i].scores[j]));
-
+                    console.log('friendsData[i].scores[j]: ' + (friendsData[i].scores[j]));
+                    
                      difference = difference + Math.abs(friendsData[i].scores[j] - userScores[j])
 
                     if (difference < totalDif) {

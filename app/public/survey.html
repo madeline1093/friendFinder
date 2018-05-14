@@ -269,8 +269,8 @@
             //console.log(userAnswers);
             //add userAnswers to the friends json
             $.post('/api/friends', userAnswers, function(data) {
-                $("#matchName").text(data.name);
-                $("#matchImg").attr("src", data.photo);
+                $("#matchName").text(data.matchName);
+                $("#matchImg").attr("src", data.matchImg);
             });
             
         });
