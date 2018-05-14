@@ -5,7 +5,7 @@
 
     let friendsData = require("../data/friends");
 
-
+    
     //routing
 
     module.exports = (function(app){
@@ -15,28 +15,38 @@
         app.post("/api/friends", function(req, res){
             let userInput = req.body;
 
-            console.log(userInput);
+            //console.log(userInput);
 
-            let userResponses = userInput.scores;
-            console.log("got here " + userResponses);
-
+            let userScores = userInput.scores;
+            console.log("got here " + userScores);
+            console.log(parseFloat(userScores[2]));
             let matchName;
             let matchImg;
             let totalDif = 10000;
 
+/*             for (let scores in friendsData){
+                console.log(friendsData[i].scores);
+            } */
             for (let i = 0; i <friendsData.length; i++){
-                console.log(JSON.stringify(friendsData[i].scores));
-
+                //console.log(JSON.stringify(friendsData[i].scores));
+                //console.log(friendsData[i].scores);
+               // console.log(friendsData);
+                //console.log(friendsData[i].friends[i].scores);
                 let difference = 0;
-                for (let j = 0; j < userInput.length; i++){
-                    difference = difference + Math.abs(friendsData[i].scores[j] - userInput[j].scores)
+                for (let j = 0; j < userScores.length; j++){
+                    //console.log('friendsData[i]: ' + friendsData[i]);
+                   // console.log('userScores: ' + userScores[j]);
+                    //console.log('friendsData[i].scores[j]: ' + parseInt(friendsData[i].scores[j]));
+
+                     difference = difference + Math.abs(friendsData[i].scores[j] - userScores[j])
+
+                    if (difference < totalDif) {
+                        totalDif = difference;
+                        matchName = friendsData[i].name;
+                        matchImg = friendsData[i].photo;
+                    } 
                 }
                 
-                if (difference <totalDif) {
-                    totalDif = difference;
-                    matchName = friendsData[i].name;
-                    matchImg = friendsData[i].photo;
-                }
             }
 
             friendsData.push(userInput);

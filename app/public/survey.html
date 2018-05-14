@@ -201,11 +201,11 @@
             <div class="input-group mb-3">
                 <select class="custom-select" id="questionTen">
                     <option selected>Choose...</option>
-                    <option value="1">1 (Strongly Disagree</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
+                    <option value=1>1 (Strongly Disagree</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5 (Strongly Agree)</option>
                 </select>
                 <div class="input-group-append">
                     <label class="input-group-text" for="questionTen">Options</label>
@@ -252,7 +252,18 @@
             let userAnswers = {
                 name: $("#nameInput").val(),
                 photo: $("#photoInput").val(),
-                scores: [$("#questionOne").val(), $("#questionTwo").val(), $("#questionThree").val(), $("#questionFour").val(), $("#questionFive").val(), $("#questionSix").val(), $("#questionSeven").val(), $("#questionEight").val(), $("#questionNine").val(), $("#questionTen").val()]
+                scores: [
+                    parseInt($("#questionOne").val()), 
+                    parseInt($("#questionTwo").val()), 
+                    parseInt($("#questionThree").val()), 
+                    parseInt($("#questionFour").val()), 
+                    parseInt($("#questionFive").val()), 
+                    parseInt($("#questionSix").val()), 
+                    parseInt($("#questionSeven").val()), 
+                    parseInt($("#questionEight").val()), 
+                    parseInt($("#questionNine").val()), 
+                    parseInt($("#questionTen").val())
+                ]
             };
             
             //console.log(userAnswers);
