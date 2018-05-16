@@ -1,114 +1,130 @@
 let friends = [
     {
     "name":"Jack",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo":"http://images1.fanpop.com/images/image_uploads/Jack-jack-shephard-887602_1055_1500.jpg",
     "scores":[
         5,
-        1,
         4,
+        3,
         4,
-        5,
         1,
+        3,
         2,
-        5,
-        4,
+        1,
+        3,
         1
       ]
   },
   {
     "name":"Kate",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo":"https://dvdbash.files.wordpress.com/2012/04/lost_evangeline_lilly_freckles_kate_austen_dvdbash_1861.jpg",
     "scores":[
-        3,
-        3,
-        2,
-        2,
-        1,
-        1,
-        1,
         4,
+        2,
+        5,
+        5,
+        2,
+        3,
+        5,
         4,
+        1,
         3
       ]
   },
   {
     "name":"Sawyer",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo":"https://i.pinimg.com/originals/47/d8/e3/47d8e3907cb03616192fdd15df52653d.jpg",
     "scores":[
         2,
-        3,
-        5,
-        1,
-        2,
-        3,
-        4,
-        5,
-        1,
-        2
-      ]
-  },
-  {
-    "name":"Locke",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    "scores":[
-        2,
-        2,
-        3,
-        2,
-        5,
-        4,
-        1,
-        2,
-        2,
-        5
-      ]
-  },
-  {
-    "name":"Charle",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    "scores":[
-        3,
-        2,
         1,
         5,
-        4,
-        4,
+        5,
         3,
-        2,
-        3,
+        1,
+        5,
+        5,
+        4,
         4
       ]
   },
   {
-    "name":"Sun",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"Locke",
+    "photo":"https://vignette.wikia.nocookie.net/lost/images/b/bb/John_Locke_.jpg/revision/latest?cb=20051226203958",
     "scores":[
+        4,
+        5,
         2,
+        3,
+        5,
+        1,
+        2,
+        3,
+        1,
+        3
+      ]
+  },
+  {
+    "name":"Charle",
+    "photo":"http://thumbs.modthesims2.com/img/1/2/1/0/3/5/MTS_paperbackwriter-397474-lostcharlie003.jpg",
+    "scores":[
+        3,
+        2,
+        2,
+        2,
+        4,
+        3,
+        3,
+        2,
+        3,
+        3
+      ]
+  },
+  {
+    "name":"Sun",
+    "photo":"https://dvdbash.files.wordpress.com/2012/04/lost_yunjin_kim_sun_kwon_dvdbash_2721.jpg",
+    "scores":[
+        3,
         1,
         4,
+        3,
+        2,
+        3,
         4,
-        3,
-        3,
-        3,
         4,
         1,
         1
       ]
   },
   {
-    "name":"Shannon",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"Boone",
+    "photo":"https://vignette.wikia.nocookie.net/lostpedia/images/8/8a/Boo.jpg/revision/latest?cb=20071104233551&path-prefix=pt",
     "scores":[
         4,
+        1,
+        2,
+        1,
         3,
-        2,
-        2,
         3,
         1,
-        5,
+        1,
+        2,
+        2
+      ]
+  },
+  {
+    "name":"Hurley",
+    "photo":"https://uproxx.files.wordpress.com/2016/05/hurley-lost.jpg?quality=95&w=650",
+    "scores":[
         5,
         4,
-        5
+        1,
+        1,
+        4,
+        1,
+        2,
+        1,
+        1,
+        1
       ]
   },
 ]
